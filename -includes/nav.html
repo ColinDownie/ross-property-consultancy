@@ -1,1 +1,24 @@
+<nav class="global-nav">
+  <ul>
+    {% assign nav = site.data.navigation %}
+
+    {% for section in nav %}
+      <li class="nav-section">
+        <span>{{ section[0] | replace: '-', ' ' | capitalize }}</span>
+
+        {% if section[1] %}
+        <ul>
+          {% for item in section[1] %}
+            {% if item contains '/' %}
+              <li><a href="/{{ section[0] }}/{{ item }}/">{{ item | replace: '-', ' ' | capitalize }}</a></li>
+            {% else %}
+              <li><a href="/{{ item }}">{{ item | replace: '-', ' ' | capitalize }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
 
