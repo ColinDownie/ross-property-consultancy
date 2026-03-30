@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node (if used later)
+node_modules/
+npm-debug.log
+
+# Build output
+dist/
+build/
+
+# Temp
+*.tmp
+*.cache
+.cache/
+
+# Editor
+.vscode/
+.idea/
