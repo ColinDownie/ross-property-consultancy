@@ -1,35 +1,19 @@
-# Services — Ross Property
+# Services
 
-## Core Property Services
+## Property Valuation
+Clear, structured valuation logic for residential, commercial, and mixed‑use assets.
 
-### Property Valuation
-Professional valuation logic for residential, commercial, and mixed‑use assets.
-
-### Feasibility Studies
+## Feasibility Studies
 Assessment of viability, cost, constraints, and projected outcomes.
 
-### Site Analysis
+## Site Analysis
 Spatial logic, environmental review, access, flow, and development potential.
 
-### Due Diligence
+## Due Diligence
 Risk identification, compliance checks, exposure analysis, and structural review.
 
-### Spatial Planning
+## Spatial Planning
 Internal layouts, flow optimisation, operational mapping, and functional design.
 
-### Development Advisory
+## Development Advisory
 Support for acquisitions, disposals, redevelopment, and strategic property decisions.
-
----
-
-## Service Delivery Model
-
-All services are supported by the Ross Property AI Assistant System, ensuring:
-
-- clarity  
-- speed  
-- accuracy  
-- consistency  
-- modern professional standards  
-
-This creates a lean, efficient, high‑performance consultancy model.
