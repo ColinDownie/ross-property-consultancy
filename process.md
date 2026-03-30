@@ -1,4 +1,4 @@
-# Process — Ross Property
+# Process
 
 ## 1. Initial Contact
 Client reaches out with a property requirement or project brief.
@@ -20,18 +20,3 @@ Client reviews outputs; amendments made where required.
 
 ## 7. Completion
 Final documents delivered; project closed or moved to next phase.
-
----
-
-## AI‑Supported Workflow
-
-The AI Assistant System supports:
-
-- communication  
-- documentation  
-- calculations  
-- compliance  
-- spatial logic  
-- workflow management  
-
-Ensuring a consistent, modern, and efficient client experience.
