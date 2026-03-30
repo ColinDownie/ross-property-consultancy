@@ -11,11 +11,17 @@
 
 {% include header.html %}
 
-<section class="training-hub">
+<section class="hero">
   <h1>Training & Competency Hub</h1>
-
   <p>Welcome to the internal training portal. Access competency frameworks, CPD logs, and structured learning modules.</p>
+</section>
 
+<section>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> <span>›</span> Training & Competency Hub
+  </div>
+
+  <h2>Training Resources</h2>
   <div class="grid">
     <a href="competency-framework/">Competency Framework</a>
     <a href="modules/">Training Modules</a>
@@ -32,4 +38,11 @@
   </ul>
 
   <h2>Training Status</h2>
-  <p>Completed Modules
+  <p>Completed Modules: [List or dashboard integration]</p>
+</section>
+
+{% include footer.html %}
+
+<script src="../js/app.js"></script>
+</body>
+</html>
