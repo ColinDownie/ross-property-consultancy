@@ -1,0 +1,10 @@
+"root": [
+  "index.html",
+  "about.html",
+  "contact.html",
+  "services/",
+  "sitemap.html",
+  "privacy.html",
+  "terms.html",
+  "cookies.html"
+],
