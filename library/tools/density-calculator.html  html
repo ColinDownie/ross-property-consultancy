@@ -1,0 +1,15 @@
+<h1>Density Calculator</h1>
+
+<p>A simple reference tool for calculating development density.</p>
+
+<h2>Formula</h2>
+<p><strong>Density = Units ÷ Site Area (ha)</strong></p>
+
+<h2>Example</h2>
+<ul>
+    <li>Site area: 0.5 ha</li>
+    <li>Units: 25</li>
+    <li>Density: 50 u/ha</li>
+</ul>
+
+<p>This tool supports early‑stage feasibility and massing studies.</p>
