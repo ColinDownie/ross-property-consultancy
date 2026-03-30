@@ -1,0 +1,104 @@
+{
+  "root": [
+    "index.html",
+    "about.html",
+    "contact.html",
+    "services/"
+  ],
+  "library": {
+    "templates": ["reports", "letters", "forms", "spreadsheets", "presentations"],
+    "checklists": [],
+    "frameworks": [],
+    "methodologies": [],
+    "tools": []
+  },
+  "reference": {
+    "standards": [],
+    "guidance": [],
+    "templates": [],
+    "regs": [],
+    "glossary": [],
+    "checklists": []
+  },
+  "training": {
+    "competency-framework": [],
+    "modules": [],
+    "cpd": [],
+    "inductions": [],
+    "toolbox-talks": []
+  },
+  "projects": {
+    "[project-name]": [
+      "01-engagement",
+      "02-feasibility",
+      "03-planning",
+      "04-delivery",
+      "05-handover",
+      "06-closeout"
+    ]
+  },
+  "it": [
+    "infrastructure",
+    "security",
+    "support",
+    "access",
+    "software",
+    "backup"
+  ],
+  "legal": [
+    "contracts",
+    "compliance",
+    "data-protection",
+    "disputes",
+    "risk",
+    "templates"
+  ],
+  "marketing": [
+    "strategy",
+    "content",
+    "social",
+    "press",
+    "assets",
+    "campaigns"
+  ],
+  "mmc": [
+    "categories",
+    "volumetric",
+    "panelised",
+    "subassemblies",
+    "site-processes",
+    "case-studies"
+  ],
+  "policies": [
+    "health-safety",
+    "environmental",
+    "quality",
+    "gdpr",
+    "cdm",
+    "hr"
+  ],
+  "social-housing": [
+    "tenure-types",
+    "regs",
+    "design",
+    "delivery",
+    "funding",
+    "case-studies"
+  ],
+  "supported-housing": [
+    "models",
+    "compliance",
+    "design",
+    "operations",
+    "funding",
+    "case-studies"
+  ],
+  "sustainability": [
+    "net-zero",
+    "carbon",
+    "environmental",
+    "energy",
+    "materials",
+    "social-value"
+  ]
+}
