@@ -1,38 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library — Ross Property Consultancy</title>
-    <link rel="stylesheet" href="../css/main.css">
-</head>
+<nav class="breadcrumb">
+  <a href="/">Home</a> &gt;
+  <span>Library</span>
+</nav>
 
-<body>
+<nav class="section-menu">
+  <ul>
+    <li><a href="/library/">Overview</a></li>
+    <li><a href="/library/documents/">Document Library</a></li>
+    <li><a href="/library/templates/">Templates</a></li>
+    <li><a href="/library/guides/">Guides & Playbooks</a></li>
+  </ul>
+</nav>
 
-{% include header.html %}
+<section class="library-overview">
+  <h1>Knowledge Library</h1>
 
-<section class="hero">
-  <h1>Library</h1>
-  <p>A structured collection of templates, checklists, frameworks, methodologies, and advisory tools.</p>
+  <p>
+    The Library is the central repository for documents, templates, and reference material used
+    across the organisation.
+  </p>
+
+  <h2>Content Types</h2>
+  <ul>
+    <li>Policies and procedures</li>
+    <li>Templates and forms</li>
+    <li>Guides, playbooks, and reference notes</li>
+  </ul>
 </section>
-
-<section>
-  <div class="breadcrumbs">
-    <a href="/">Home</a> <span>›</span> Library
-  </div>
-
-  <h2>Library Sections</h2>
-  <div class="grid">
-    <a href="templates/">Templates</a>
-    <a href="checklists/">Checklists</a>
-    <a href="frameworks/">Frameworks</a>
-    <a href="methodologies/">Methodologies</a>
-    <a href="tools/">Tools</a>
-  </div>
-</section>
-
-{% include footer.html %}
-
-<script src="../js/app.js"></script>
-</body>
-</html>
