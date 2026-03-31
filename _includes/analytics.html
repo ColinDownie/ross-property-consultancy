@@ -1,0 +1,30 @@
+<!-- Behavioural Insight Layer -->
+<script>
+  (function() {
+    const page = {
+      title: document.title,
+      section: document.body.className || "root",
+      path: window.location.pathname,
+      loaded: new Date().toISOString()
+    };
+
+    const metrics = {
+      scroll: 0,
+      time: 0
+    };
+
+    // Track scroll depth
+    window.addEventListener("scroll", () => {
+      const position = window.scrollY + window.innerHeight;
+      const height = document.body.scrollHeight;
+      metrics.scroll = Math.max(metrics.scroll, Math.round((position / height) * 100));
+    });
+
+    // Track time on page
+    const start = Date.now();
+    window.addEventListener("beforeunload", () => {
+      metrics.time = Math.round((Date.now() - start) / 1000);
+      console.log("Page Insight:", { page, metrics });
+    });
+  })();
+</script>
