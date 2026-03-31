@@ -99,6 +99,11 @@
         fireJoke("Easy lad! Calm down calm down! (Harry Enfield voice)");
       }
 
+      /* AI self‑deprecation */
+      if (scrollSpeed > 200 && Math.random() < 0.10) {
+        fireJoke("If you scroll any faster I’ll need to reboot myself.");
+      }
+
       return;
     }
 
@@ -109,6 +114,11 @@
 
       if (Math.random() < 0.05) {
         fireJoke("Focus mode: I’ve dimmed the noise. Just you and the content.");
+      }
+
+      /* IT Crowd reference */
+      if (Math.random() < 0.02) {
+        fireJoke("Focus mode: If anything breaks, try switching it off and on again.");
       }
 
       return;
@@ -140,6 +150,11 @@
         fireJoke("Opening and closing the menu won’t change the universe. Promise.");
       }
     }
+
+    /* AI self‑mocking */
+    if (clickCount === 50) {
+      fireJoke("If I were any smarter, I’d still tell you to reboot me.");
+    }
   });
 
   /* --------------------------------------------------
@@ -148,7 +163,7 @@
   window.addEventListener("keydown", (e) => {
     if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "d") {
       console.log("%cDeveloper mode: You found the backchannel.", "color:#F5B544;font-weight:bold;");
-      fireJoke("Developer mode: Welcome to the secret lounge.");
+      fireJoke("Developer mode: Don’t worry, I’m not Skynet. Yet.");
     }
   });
 
