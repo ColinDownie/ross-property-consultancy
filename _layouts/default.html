@@ -16,6 +16,9 @@
   <!-- Global Navigation -->
   {% include nav.html %}
 
+  <!-- Floating Personality Button -->
+  <div class="personality-floating-btn" title="Personality Settings">😏</div>
+
   <main class="page-main">
 
     <!-- Breadcrumb Trail -->
@@ -33,6 +36,47 @@
 
   <!-- Global Footer -->
   {% include footer.html %}
+
+  <!-- Personality Control Panel -->
+  <div id="personality-panel">
+    <h3>Personality Settings</h3>
+
+    <label>
+      Region:
+      <select id="region-select">
+        <option value="glasgow">Glasgow (Default)</option>
+        <option value="scouse">Scouse</option>
+        <option value="manc">Manc</option>
+        <option value="yorkshire">Yorkshire</option>
+        <option value="london">London</option>
+      </select>
+    </label>
+
+    <label>
+      <input type="checkbox" id="chaos-toggle">
+      Chaos Mode
+    </label>
+
+    <label>
+      <input type="checkbox" id="deadpan-toggle">
+      Deadpan Mode
+    </label>
+
+    <label>
+      <input type="checkbox" id="sassmax-toggle" checked>
+      Sass To The Max
+    </label>
+
+    <label>
+      <input type="checkbox" id="drunk-toggle">
+      Drunk Mode (After Hours)
+    </label>
+
+    <div class="close-btn">Close</div>
+  </div>
+
+  <!-- Personality Engine -->
+  <script src="/assets/js/personality.js"></script>
 
 </body>
 </html>
