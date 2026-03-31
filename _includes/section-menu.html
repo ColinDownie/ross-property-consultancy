@@ -1,0 +1,13 @@
+{% if page.section_menu %}
+<nav class="section-menu">
+  <ul>
+    {% for item in page.section_menu %}
+      <li>
+        <a href="{{ item.url }}" {% if item.active %}class="active"{% endif %}>
+          {{ item.label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}
