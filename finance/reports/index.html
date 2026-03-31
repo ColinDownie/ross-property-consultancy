@@ -1,15 +1,31 @@
-<section class="financial-reports">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Reports — Finance Division</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+{% include header.html %}
+
+<section class="hero">
   <h1>Financial Reports</h1>
-
-  <p>Monthly, quarterly, and annual financial reporting.</p>
-
-  <h2>Report Types</h2>
-  <ul>
-    <li>Management Accounts</li>
-    <li>Cashflow Reports</li>
-    <li>Project Financial Reports</li>
-    <li>Annual Financial Statements</li>
-  </ul>
-
-  <input type="file" />
+  <p>Regular reporting on financial performance, project spend, cashflow, and organisational health to support informed decision‑making.</p>
 </section>
+
+<section>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/finance/">Finance Division</a> <span>›</span>
+    Financial Reports
+  </div>
+</section>
+
+{% include footer.html %}
+
+<script src="../../js/app.js"></script>
+</body>
+</html>
