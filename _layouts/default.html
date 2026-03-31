@@ -3,24 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
+
+  <!-- Global Stylesheet -->
   <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Section-specific class injection -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body class="{{ page.section | default: 'root' }}">
 
+  <!-- Global Navigation -->
   {% include nav.html %}
 
   <main class="page-main">
 
+    <!-- Breadcrumb Trail -->
     {% include breadcrumb.html %}
 
+    <!-- Section Menu (if defined in front matter) -->
     {% include section-menu.html %}
 
+    <!-- Page Content -->
     <section class="page-content">
       {{ content }}
     </section>
 
   </main>
 
+  <!-- Global Footer -->
   {% include footer.html %}
 
 </body>
