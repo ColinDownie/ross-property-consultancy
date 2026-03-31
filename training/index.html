@@ -1,48 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training & Competency Hub — Ross Property Consultancy</title>
-    <link rel="stylesheet" href="../css/main.css">
-</head>
+<nav class="breadcrumb">
+  <a href="/">Home</a> &gt;
+  <span>Training</span>
+</nav>
 
-<body>
-
-{% include header.html %}
-
-<section class="hero">
-  <h1>Training & Competency Hub</h1>
-  <p>Welcome to the internal training portal. Access competency frameworks, CPD logs, and structured learning modules.</p>
-</section>
-
-<section>
-  <div class="breadcrumbs">
-    <a href="/">Home</a> <span>›</span> Training & Competency Hub
-  </div>
-
-  <h2>Training Resources</h2>
-  <div class="grid">
-    <a href="competency-framework/">Competency Framework</a>
-    <a href="modules/">Training Modules</a>
-    <a href="cpd/">CPD Log</a>
-    <a href="inductions/">Inductions</a>
-    <a href="toolbox-talks/">Toolbox Talks</a>
-  </div>
-
-  <h2>Upcoming Training</h2>
+<nav class="section-menu">
   <ul>
-    <li>CDM Awareness – [Date]</li>
-    <li>Fire Safety Essentials – [Date]</li>
-    <li>Project Management Fundamentals – [Date]</li>
+    <li><a href="/training/">Overview</a></li>
+    <li><a href="/training/induction/">Induction</a></li>
+    <li><a href="/training/technical/">Technical Training</a></li>
+    <li><a href="/training/governance/">Governance & Compliance Training</a></li>
   </ul>
+</nav>
 
-  <h2>Training Status</h2>
-  <p>Completed Modules: [List or dashboard integration]</p>
+<section class="training-overview">
+  <h1>Training Framework</h1>
+
+  <p>
+    The Training Framework defines how skills, knowledge, and competencies are developed and
+    maintained across the organisation.
+  </p>
+
+  <h2>Training Streams</h2>
+  <ul>
+    <li>Induction and onboarding</li>
+    <li>Technical and role‑specific training</li>
+    <li>Governance, compliance, and risk training</li>
+  </ul>
 </section>
-
-{% include footer.html %}
-
-<script src="../js/app.js"></script>
-</body>
-</html>
