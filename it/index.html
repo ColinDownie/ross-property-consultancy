@@ -1,44 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Division — Ross Property Consultancy</title>
-    <link rel="stylesheet" href="../css/main.css">
-</head>
+<nav class="breadcrumb">
+  <a href="/">Home</a> &gt;
+  <span>IT</span>
+</nav>
 
-<body>
+<nav class="section-menu">
+  <ul>
+    <li><a href="/it/">Overview</a></li>
+    <li><a href="/it/systems/">Systems & Infrastructure</a></li>
+    <li><a href="/it/security/">Security & Access</a></li>
+    <li><a href="/it/support/">Support & Service Desk</a></li>
+  </ul>
+</nav>
 
-{% include header.html %}
+<section class="it-overview">
+  <h1>IT Framework</h1>
 
-<section class="hero">
-  <h1>IT Division</h1>
-  <p>The IT division manages systems, security, infrastructure, support, and digital operations across the organisation.</p>
-</section>
-
-<section>
-  <div class="breadcrumbs">
-    <a href="/">Home</a> <span>›</span> IT Division
-  </div>
-
-  <h2>IT Services</h2>
-  <div class="grid">
-    <a href="infrastructure/">Infrastructure</a>
-    <a href="security/">Cyber Security</a>
-    <a href="support/">IT Support</a>
-    <a href="access/">Access & Permissions</a>
-    <a href="software/">Software & Licences</a>
-    <a href="backup/">Backup & Recovery</a>
-  </div>
-
-  <h2>Purpose</h2>
   <p>
-    To ensure secure, reliable, and efficient digital operations across all teams and projects.
+    The IT Framework defines the systems, infrastructure, security, and support model that underpin
+    the organisation’s digital operations. It is designed for reliability, security, and scalability.
   </p>
+
+  <h2>Scope</h2>
+  <ul>
+    <li>Core systems and platforms</li>
+    <li>Access control and security</li>
+    <li>Data management and backup</li>
+    <li>Support, incident handling, and change</li>
+  </ul>
 </section>
-
-{% include footer.html %}
-
-<script src="../js/app.js"></script>
-</body>
-</html>
