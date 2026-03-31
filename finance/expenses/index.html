@@ -1,17 +1,31 @@
-<section class="expenses">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses — Finance Division</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+{% include header.html %}
+
+<section class="hero">
   <h1>Expenses</h1>
-
-  <p>Guidance for submitting and approving staff expenses.</p>
-
-  <h2>Expense Categories</h2>
-  <ul>
-    <li>Travel</li>
-    <li>Accommodation</li>
-    <li>Subsistence</li>
-    <li>Equipment</li>
-    <li>Training</li>
-  </ul>
-
-  <h2>Process</h2>
-  <p>Submit receipts → Manager approval → Finance processing.</p>
+  <p>Policies and processes for submitting, approving, and reimbursing expenses across projects and internal operations.</p>
 </section>
+
+<section>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/finance/">Finance Division</a> <span>›</span>
+    Expenses
+  </div>
+</section>
+
+{% include footer.html %}
+
+<script src="../../js/app.js"></script>
+</body>
+</html>
