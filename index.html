@@ -1,53 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ross Property Consultancy</title>
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ross Consultancy</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
 
-{% include header.html %}
+  <!-- HEADER -->
+  <header class="navbar container">
+    <div class="logo">THE ROSS CONSULTANCY</div>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/projects">Projects</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>Ross Property Consultancy</h1>
-    <p>Clear, structured, modern property advisory.</p>
-</section>
-
-<!-- SERVICES PREVIEW -->
-<section class="page">
-    <h2>Core Services</h2>
-    <p>Independent advisory across valuation, feasibility, due diligence, and development strategy.</p>
-
-    <ul class="service-list" style="margin-top:2rem;">
-        <li><a href="services/valuation.html">Valuation</a></li>
-        <li><a href="services/feasibility.html">Feasibility</a></li>
-        <li><a href="services/site-analysis.html">Site Analysis</a></li>
-        <li><a href="services/due-diligence.html">Due Diligence</a></li>
-        <li><a href="services/spatial-planning.html">Spatial Planning</a></li>
-        <li><a href="services/development-advisory.html">Development Advisory</a></li>
-    </ul>
-</section>
-
-<!-- CTA -->
-<section class="page" style="text-align:center;">
-    <h2>Work With Us</h2>
-    <p>Structured insight. Clear outcomes. Modern advisory for modern development.</p>
-    <p style="margin-top:1.5rem;">
-        <a href="contact.html" style="font-weight:bold; text-decoration:none; color:#000;">Get in touch →</a>
+  <!-- HERO -->
+  <section class="hero container">
+    <h1>Architecting Clarity, Identity & Operational Excellence</h1>
+    <p class="hero-sub">
+      Strategic identity systems for modern consultancies, agencies, and creative organisations.
     </p>
-</section>
+    <a class="btn" href="/contact">Work With Us</a>
+  </section>
 
-{% include footer.html %}
+  <!-- FLOATING UI BUTTON -->
+  <div class="ui-floating-button">+</div>
 
-<!-- UI ELEMENT: PREMIUM FLOATING BUTTON (TOP RIGHT) -->
-<div class="ui-floating-button ui-top-right">
-    <span class="ui-face"></span>
-</div>
+  <!-- FOOTER -->
+  <footer class="footer container">
+    <p>© THE ROSS CONSULTANCY</p>
+  </footer>
 
-<script src="js/app.js"></script>
 </body>
 </html>
