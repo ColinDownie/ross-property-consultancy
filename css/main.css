@@ -1,141 +1,228 @@
-/* --------------------------------------------------
-   PERSONALITY UI — PREMIUM DESIGN
--------------------------------------------------- */
+/* ==========================================================================
+   THE ROSS CONSULTANCY — PREMIUM CONSULTANCY DESIGN SYSTEM
+   Modular Architecture (Tokens → Typography → Layout → Components → UI)
+   Midnight Blue (#0B1E3F) + Electric Blue (#2D8CFF)
+   Playfair Display + Inter
+   Neutral Greys • Squircle Radius • Generous Spacing
+========================================================================== */
 
-/* Floating Personality Button */
-.personality-floating-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
-  border: 2px solid var(--brand);
-  border-radius: 18px; /* premium squircle */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  z-index: 999;
+
+/* ==========================================================================
+   1. TOKENS — BRAND, COLOUR, SPACING, RADIUS, SHADOW, BREAKPOINTS
+========================================================================== */
+
+:root {
+  /* Brand Colours */
+  --brand-primary: #0B1E3F;
+  --brand-accent: #2D8CFF;
+
+  /* Neutral Greys */
+  --grey-0: #FFFFFF;
+  --grey-50: #F7F7F7;
+  --grey-100: #EDEDED;
+  --grey-200: #D9D9D9;
+  --grey-300: #BFBFBF;
+  --grey-400: #A6A6A6;
+  --grey-500: #8C8C8C;
+  --grey-600: #737373;
+  --grey-700: #595959;
+  --grey-800: #404040;
+  --grey-900: #1A1A1A;
+
+  /* Typography */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Font Sizes (Responsive Scale) */
+  --fs-xs: 0.85rem;
+  --fs-sm: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-xxl: 2.25rem;
+  --fs-display: clamp(2.5rem, 5vw, 4rem);
+
+  /* Line Heights */
+  --lh-tight: 1.1;
+  --lh-normal: 1.4;
+  --lh-relaxed: 1.6;
+
+  /* Spacing (Generous Scale) */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+
+  /* Radius (Squircle) */
+  --radius-squircle: 16px;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-medium: 0 6px 20px rgba(0,0,0,0.12);
+
+  /* Breakpoints */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1440px;
 }
 
-.personality-floating-btn:hover {
-  transform: scale(1.05);
-  border-color: var(--accent);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+
+/* ==========================================================================
+   2. BASE — RESET, BODY, TYPOGRAPHY, LINKS
+========================================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Premium Face (Emoji placeholder — replace with custom face if needed) */
-.personality-floating-btn::before {
-  content: "😉";
-  font-size: 22px;
-  line-height: 1;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Nav Personality Icon */
-.personality-toggle {
-  margin-left: 20px;
-  font-size: 22px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  color: var(--grey-900);
+  background: var(--grey-0);
+  padding: var(--space-lg);
 }
 
-.personality-toggle:hover {
-  transform: scale(1.1) rotate(-5deg);
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  line-height: var(--lh-tight);
+  color: var(--brand-primary);
 }
 
-/* --------------------------------------------------
-   PERSONALITY PANEL
--------------------------------------------------- */
+h1 { font-size: var(--fs-display); }
+h2 { font-size: var(--fs-xxl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); }
 
-#personality-panel {
-  position: fixed;
-  bottom: 90px;
-  right: 24px;
-  width: 280px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  padding: var(--space-5);
-  display: none; /* toggled by JS */
-  z-index: 998;
+p {
+  margin-bottom: var(--space-md);
 }
 
-#personality-panel h3 {
-  font-size: var(--h3);
-  margin-bottom: var(--space-4);
+a {
+  color: var(--brand-accent);
+  text-decoration: none;
+  font-weight: 500;
 }
 
-#personality-panel label {
-  display: block;
-  margin-bottom: var(--space-3);
-  font-size: var(--body);
+a:hover {
+  text-decoration: underline;
 }
 
-#personality-panel select,
-#personality-panel input[type="checkbox"] {
-  margin-left: 6px;
+
+/* ==========================================================================
+   3. LAYOUT — CONTAINERS, GRID, SECTIONS
+========================================================================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
 }
 
-#personality-panel .close-btn {
-  margin-top: var(--space-4);
-  padding: var(--space-2) var(--space-3);
-  background: var(--brand);
-  color: #fff;
-  border-radius: var(--radius);
-  text-align: center;
-  cursor: pointer;
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: var(--bp-md)) {
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+/* ==========================================================================
+   4. COMPONENTS — BUTTONS, CARDS, NAV, FOOTER
+========================================================================== */
+
+.btn {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--brand-primary);
+  color: var(--grey-0);
+  border-radius: var(--radius-squircle);
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
   transition: background 0.2s ease;
 }
 
-#personality-panel .close-btn:hover {
-  background: var(--brand-dark);
+.btn:hover {
+  background: var(--brand-accent);
 }
 
-/* --------------------------------------------------
-   MICRO-ANIMATIONS
--------------------------------------------------- */
-
-@keyframes wink-flick {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(-12deg); }
-  100% { transform: rotate(0deg); }
+.card {
+  background: var(--grey-0);
+  border-radius: var(--radius-squircle);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-soft);
 }
 
-.personality-floating-btn:hover::before {
-  animation: wink-flick 0.3s ease;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--space-lg);
 }
 
-/* Talking pulse */
-body.talking .personality-floating-btn {
-  box-shadow: 0 0 12px var(--accent);
+.footer {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--grey-200);
+  text-align: center;
+  color: var(--grey-600);
 }
 
-/* --------------------------------------------------
-   MODE VISUAL HOOKS (SAFE)
--------------------------------------------------- */
 
-/* Deadpan Mode */
-body.deadpan-mode {
-  filter: grayscale(100%);
+/* ==========================================================================
+   5. UTILITIES — SPACING, TEXT, DISPLAY
+========================================================================== */
+
+.mt-lg { margin-top: var(--space-lg); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.text-center { text-align: center; }
+.hidden { display: none !important; }
+
+
+/* ==========================================================================
+   6. UI ELEMENT — FLOATING BUTTON (TOP RIGHT)
+========================================================================== */
+
+.ui-floating-button {
+  position: fixed;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  width: 56px;
+  height: 56px;
+  background: var(--brand-primary);
+  color: var(--grey-0);
+  border-radius: var(--radius-squircle);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-lg);
+  cursor: pointer;
+  box-shadow: var(--shadow-medium);
+  z-index: 9999;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-/* Chaos Mode */
-body.chaos-mode {
-  transform: rotate(0.2deg);
-}
-
-/* Drunk Mode */
-body.drunk-mode {
-  filter: blur(0.4px) saturate(120%);
-}
-
-/* Konami Unlock (visual only) */
-body.konami-unlocked .personality-floating-btn {
-  transform: rotate(360deg);
-  transition: transform 0.6s ease;
+.ui-floating-button:hover {
+  background: var(--brand-accent);
+  transform: translateY(-2px);
 }
