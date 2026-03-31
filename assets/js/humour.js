@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ----------------------------------------------------------
-   Developer Humour Engine – IT Crowd Edition
+   Developer Humour Engine – IT Crowd + Reynholm Blend
    Console-only. Hidden from users. Pure chaos for developers.
    ---------------------------------------------------------- */
 
@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Compiling… still compiling… still… compiling…"
     ];
 
-    // Rare legendary jokes (1% chance)
     const legendary = [
         "Moss has entered the chat.",
         "Jen has unplugged the internet again.",
@@ -54,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return arr[Math.floor(Math.random() * arr.length)];
     }
 
-    // 1% chance of legendary joke
     const roll = Math.random();
     const message = roll < 0.01 ? randomItem(legendary) : randomItem(jokes);
 
@@ -64,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     /* ----------------------------------------------------------
-       ASCII Moss – appears rarely (0.5% chance)
+       ASCII Moss – rare (0.5%)
        ---------------------------------------------------------- */
 
     const asciiMoss = `
@@ -75,10 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (Math.random() < 0.005) {
         console.log("%c" + asciiMoss, "color:#33ccff; font-family:monospace;");
+        unlockAchievement("Moss Sighted");
     }
 
     /* ----------------------------------------------------------
-       Moss-Style Fake Panic Error – very rare (0.2% chance)
+       Moss-Style Fake Panic Error – very rare (0.2%)
        ---------------------------------------------------------- */
 
     if (Math.random() < 0.002) {
@@ -86,15 +85,41 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("Attempting to re-enable the Internet…");
         setTimeout(() => {
             console.log("Internet restored. Please do not tell Jen.");
+            unlockAchievement("Survived a Panic Event");
         }, 1500);
     }
 
-})();
+    /* ----------------------------------------------------------
+       Boss Events – extremely rare (0.05%)
+       ---------------------------------------------------------- */
 
-/* ----------------------------------------------------------
-   Konami Code – Unlock Developer Mode: Moss Edition
-   ---------------------------------------------------------- */
+    if (Math.random() < 0.0005) {
+        console.log("%c⚠️ BOSS EVENT: Douglas Reynholm has taken over the console.",
+            "color:#ff33aa; font-weight:bold;");
+        console.log("‘BRILLIANT!’");
+        unlockAchievement("Encountered Douglas");
+    }
 
-(function() {
-    const konami = [38,38,40,40,37,39,37,39,66,65];
-    let index
+    /* ----------------------------------------------------------
+       Developer Achievements System
+       ---------------------------------------------------------- */
+
+    const achievements = new Set();
+
+    function unlockAchievement(name) {
+        if (achievements.has(name)) return;
+        achievements.add(name);
+
+        const styles = [
+            "color:#00ff99; font-weight:bold;",
+            "color:#ffaa00; font-weight:bold;",
+            "color:#ff66cc; font-weight:bold;",
+            "color:#66aaff; font-weight:bold;"
+        ];
+
+        const style = styles[Math.floor(Math.random() * styles.length)];
+
+        const messages = {
+            "Console Explorer": "Achievement unlocked: Looked in the console.",
+            "F12 Master": "🏆 TRIUMPH! YOU HAVE MASTERED THE SACRED F12!",
+            "Moss Sighted": "Achievement unlocked: Witnessed Moss
