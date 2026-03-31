@@ -1,7 +1,31 @@
-<section class="client-documents">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents — Client Portal</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+{% include header.html %}
+
+<section class="hero">
   <h1>Documents</h1>
-
-  <p>All shared documents for your projects.</p>
-
-  <input type="file" />
+  <p>Centralised access to reports, drawings, contracts, and project files shared securely with your organisation.</p>
 </section>
+
+<section>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/client-portal/">Client Portal</a> <span>›</span>
+    Documents
+  </div>
+</section>
+
+{% include footer.html %}
+
+<script src="../../js/app.js"></script>
+</body>
+</html>
