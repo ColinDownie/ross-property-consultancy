@@ -1,0 +1,9 @@
+<nav class="breadcrumb">
+  <a href="/">Home</a>
+  {% if page.section %}
+    &gt; <a href="/{{ page.section }}/">{{ page.section_label | default: page.section | capitalize }}</a>
+  {% endif %}
+  {% if page.crumb %}
+    &gt; <span>{{ page.crumb }}</span>
+  {% endif %}
+</nav>
