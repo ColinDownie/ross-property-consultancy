@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="{{ page.section | default: 'root' }}">
+
+  {% include nav.html %}
+
+  <main class="page-main">
+
+    {% include breadcrumb.html %}
+
+    {% include section-menu.html %}
+
+    <section class="page-content">
+      {{ content }}
+    </section>
+
+  </main>
+
+  {% include footer.html %}
+
+</body>
+</html>
