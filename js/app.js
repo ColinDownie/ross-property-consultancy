@@ -8,10 +8,11 @@
   let lastScroll = 0;
   let scrollSpeed = 0;
   let loadingJoked = false;
+  let clickCount = 0;
+  let menuToggleCount = 0;
 
   /* --------------------------------------------------
      OPTIONAL AUDIO (SAFE, NON-INTRUSIVE)
-     Replace the file with your own small bleep/chime.
   -------------------------------------------------- */
   const jokeAudio = new Audio("/assets/audio/joke-bleep.mp3");
 
@@ -61,6 +62,15 @@
       fireJoke("Calm mode: I could stay like this all day.");
     }
 
+    /* Mindfulness suggestion */
+    if (idle === 120) {
+      fireJoke("You’ve been still for a bit. Fancy 5 minutes of mindfulness?");
+    }
+
+    if (idle === 180) {
+      fireJoke("Still here? Deep breath. Reset. You’re doing grand.");
+    }
+
   }, 1000);
 
   ["mousemove", "keydown", "click", "scroll"].forEach(evt => {
@@ -83,6 +93,12 @@
       if (Math.random() < 0.05) {
         fireJoke("Flow mode: You’re moving fast. I like the energy.");
       }
+
+      /* Scouser “Calm Down” moment */
+      if (scrollSpeed > 120 && Math.random() < 0.10) {
+        fireJoke("Easy lad! Calm down calm down! (Harry Enfield voice)");
+      }
+
       return;
     }
 
@@ -94,16 +110,35 @@
       if (Math.random() < 0.05) {
         fireJoke("Focus mode: I’ve dimmed the noise. Just you and the content.");
       }
+
       return;
     }
   });
 
   /* --------------------------------------------------
-     RANDOM CLICK HUMOUR
+     RANDOM CLICK HUMOUR + BREW SUGGESTIONS
   -------------------------------------------------- */
-  document.addEventListener("click", () => {
+  document.addEventListener("click", (e) => {
+    clickCount++;
+
     if (Math.random() < 0.02) {
       fireJoke("Click registered: Strong choice. Confident.");
+    }
+
+    if (clickCount === 15) {
+      fireJoke("You’ve clicked that more times than needed. Go make yourself a brew.");
+    }
+
+    if (clickCount === 30) {
+      fireJoke("Serious clicking energy. Brew time. Proper brew.");
+    }
+
+    /* Menu toggle spam */
+    if (e.target.classList.contains("mobile-menu-toggle")) {
+      menuToggleCount++;
+      if (menuToggleCount === 10) {
+        fireJoke("Opening and closing the menu won’t change the universe. Promise.");
+      }
     }
   });
 
