@@ -54,6 +54,7 @@ body {
   background: var(--bg-main);
   color: var(--text-main);
   line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 /* --------------------------------------------------
@@ -104,12 +105,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
 }
 
 .global-nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: var(--space-6);
 }
@@ -145,4 +145,66 @@ section {
   display: none;
 }
 
-@media (max-width: 768
+@media (max-width: 768px) {
+  .global-nav ul {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+
+/* --------------------------------------------------
+   BEHAVIOURAL MODES (CALM / FOCUS / FLOW)
+-------------------------------------------------- */
+
+/* CALM MODE */
+body.calm-mode {
+  background: #f7f7f7;
+}
+
+body.calm-mode .page-content {
+  opacity: 0.9;
+}
+
+body.calm-mode nav.global-nav {
+  opacity: 0.7;
+}
+
+/* FOCUS MODE */
+body.focus-mode .page-content {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+body.focus-mode nav.global-nav {
+  opacity: 0.4;
+}
+
+/* FLOW MODE */
+body.flow-mode nav.global-nav {
+  opacity: 1;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+body.flow-mode .page-content {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------
+   MICRO-ANIMATIONS (PERSONALITY)
+-------------------------------------------------- */
+
+@keyframes pulse-talk {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.01); box-shadow: 0 0 12px rgba(0,0,0,0.06); }
+  100% { transform: scale(1); box-shadow: none; }
+}
+
+body.talking .page-content {
+  animation: pulse-talk 0.8s ease-in-out;
+}
