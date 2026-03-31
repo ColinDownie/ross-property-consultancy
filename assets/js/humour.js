@@ -63,4 +63,38 @@ document.addEventListener("DOMContentLoaded", () => {
         "color:#66aaff; font-weight:bold; font-family:monospace;"
     );
 
+    /* ----------------------------------------------------------
+       ASCII Moss – appears rarely (0.5% chance)
+       ---------------------------------------------------------- */
+
+    const asciiMoss = `
+       (•_•)
+      <)   )╯   Maurice Moss
+       /   \\
+    `;
+
+    if (Math.random() < 0.005) {
+        console.log("%c" + asciiMoss, "color:#33ccff; font-family:monospace;");
+    }
+
+    /* ----------------------------------------------------------
+       Moss-Style Fake Panic Error – very rare (0.2% chance)
+       ---------------------------------------------------------- */
+
+    if (Math.random() < 0.002) {
+        console.error("🔥 CRITICAL ERROR: The Internet has been disabled.");
+        console.warn("Attempting to re-enable the Internet…");
+        setTimeout(() => {
+            console.log("Internet restored. Please do not tell Jen.");
+        }, 1500);
+    }
+
 })();
+
+/* ----------------------------------------------------------
+   Konami Code – Unlock Developer Mode: Moss Edition
+   ---------------------------------------------------------- */
+
+(function() {
+    const konami = [38,38,40,40,37,39,37,39,66,65];
+    let index
