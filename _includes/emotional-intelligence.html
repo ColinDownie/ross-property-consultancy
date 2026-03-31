@@ -1,0 +1,52 @@
+<!-- Adaptive Interaction Layer -->
+<script>
+  (function() {
+    const state = {
+      idleTime: 0,
+      scrollActivity: 0,
+      lastInteraction: Date.now()
+    };
+
+    // Track user activity
+    const resetIdle = () => {
+      state.idleTime = 0;
+      state.lastInteraction = Date.now();
+    };
+
+    ["mousemove", "keydown", "scroll", "click"].forEach(evt => {
+      window.addEventListener(evt, resetIdle);
+    });
+
+    // Idle timer
+    setInterval(() => {
+      state.idleTime++;
+      if (state.idleTime === 20) {
+        console.log("Adaptive Layer: User appears focused or reflective.");
+      }
+      if (state.idleTime === 60) {
+        console.log("Adaptive Layer: User has been inactive for a while.");
+      }
+    }, 1000);
+
+    // Scroll behaviour
+    window.addEventListener("scroll", () => {
+      state.scrollActivity++;
+      if (state.scrollActivity === 50) {
+        console.log("Adaptive Layer: High engagement detected.");
+      }
+    });
+
+    // Subtle UI adaptation
+    const adaptUI = () => {
+      const body = document.body;
+
+      if (state.idleTime > 30) {
+        body.classList.add("calm-mode");
+      } else {
+        body.classList.remove("calm-mode");
+      }
+    };
+
+    setInterval(adaptUI, 2000);
+  })();
+</script>
