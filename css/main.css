@@ -1,210 +1,141 @@
 /* --------------------------------------------------
-   RESET & BASE
+   PERSONALITY UI — PREMIUM DESIGN
 -------------------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-:root {
-  /* Colours */
-  --brand: #1C3F5E;
-  --brand-dark: #152F46;
-  --accent: #F5B544;
-
-  --bg-main: #F5F5F7;
-  --bg-card: #FFFFFF;
-  --bg-footer: #0B0C10;
-
-  --text-main: #111111;
-  --text-muted: #6B7280;
-  --text-footer: #E5E7EB;
-  --text-footer-muted: #9CA3AF;
-
-  --border: #E5E7EB;
-
-  /* Typography */
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  --h1: 2.4rem;
-  --h2: 1.8rem;
-  --h3: 1.4rem;
-  --body: 1rem;
-  --small: 0.875rem;
-
-  /* Spacing scale */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 24px;
-  --space-6: 32px;
-  --space-7: 40px;
-  --space-8: 48px;
-  --space-9: 64px;
-
-  /* Effects */
-  --radius: 6px;
-  --transition: 150ms ease-out;
-}
-
-body {
-  font-family: var(--font);
-  background: var(--bg-main);
-  color: var(--text-main);
-  line-height: 1.6;
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
-/* --------------------------------------------------
-   TYPOGRAPHY
--------------------------------------------------- */
-h1 { font-size: var(--h1); margin-bottom: var(--space-4); }
-h2 { font-size: var(--h2); margin-bottom: var(--space-3); }
-h3 { font-size: var(--h3); margin-bottom: var(--space-2); }
-
-p, li {
-  font-size: var(--body);
-  line-height: 1.6;
-}
-
-a {
-  color: var(--brand);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-a:hover {
-  color: var(--brand-dark);
-}
-
-/* --------------------------------------------------
-   LAYOUT
--------------------------------------------------- */
-section {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: var(--space-8) var(--space-6);
-}
-
-.utility-page {
-  background: var(--bg-card);
-  padding: var(--space-7);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-}
-
-/* --------------------------------------------------
-   GLOBAL NAVIGATION
--------------------------------------------------- */
-.global-nav {
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-  height: 72px;
+/* Floating Personality Button */
+.personality-floating-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+  border: 2px solid var(--brand);
+  border-radius: 18px; /* premium squircle */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  z-index: 999;
 }
 
-.global-nav ul {
-  list-style: none;
-  display: flex;
-  gap: var(--space-6);
+.personality-floating-btn:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.global-nav a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  position: relative;
-  padding: var(--space-1) 0;
-  color: var(--text-main);
+/* Premium Face (Emoji placeholder — replace with custom face if needed) */
+.personality-floating-btn::before {
+  content: "😉";
+  font-size: 22px;
+  line-height: 1;
 }
 
-.global-nav a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
+/* Nav Personality Icon */
+.personality-toggle {
+  margin-left: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.personality-toggle:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* --------------------------------------------------
+   PERSONALITY PANEL
+-------------------------------------------------- */
+
+#personality-panel {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 280px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: var(--space-5);
+  display: none; /* toggled by JS */
+  z-index: 998;
+}
+
+#personality-panel h3 {
+  font-size: var(--h3);
+  margin-bottom: var(--space-4);
+}
+
+#personality-panel label {
+  display: block;
+  margin-bottom: var(--space-3);
+  font-size: var(--body);
+}
+
+#personality-panel select,
+#personality-panel input[type="checkbox"] {
+  margin-left: 6px;
+}
+
+#personality-panel .close-btn {
+  margin-top: var(--space-4);
+  padding: var(--space-2) var(--space-3);
   background: var(--brand);
-  transition: var(--transition);
-  transform: translateX(-50%);
+  color: #fff;
+  border-radius: var(--radius);
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.global-nav a:hover::after {
-  width: 100%;
-}
-
-/* --------------------------------------------------
-   MOBILE NAVIGATION
--------------------------------------------------- */
-.mobile-menu-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .global-nav ul {
-    display: none;
-  }
-  .mobile-menu-toggle {
-    display: block;
-  }
+#personality-panel .close-btn:hover {
+  background: var(--brand-dark);
 }
 
 /* --------------------------------------------------
-   BEHAVIOURAL MODES (CALM / FOCUS / FLOW)
+   MICRO-ANIMATIONS
 -------------------------------------------------- */
 
-/* CALM MODE */
-body.calm-mode {
-  background: #f7f7f7;
+@keyframes wink-flick {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-12deg); }
+  100% { transform: rotate(0deg); }
 }
 
-body.calm-mode .page-content {
-  opacity: 0.9;
+.personality-floating-btn:hover::before {
+  animation: wink-flick 0.3s ease;
 }
 
-body.calm-mode nav.global-nav {
-  opacity: 0.7;
-}
-
-/* FOCUS MODE */
-body.focus-mode .page-content {
-  max-width: 720px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
-
-body.focus-mode nav.global-nav {
-  opacity: 0.4;
-}
-
-/* FLOW MODE */
-body.flow-mode nav.global-nav {
-  opacity: 1;
-  position: sticky;
-  top: 0;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-body.flow-mode .page-content {
-  transform: translateY(0);
+/* Talking pulse */
+body.talking .personality-floating-btn {
+  box-shadow: 0 0 12px var(--accent);
 }
 
 /* --------------------------------------------------
-   MICRO-ANIMATIONS (PERSONALITY)
+   MODE VISUAL HOOKS (SAFE)
 -------------------------------------------------- */
 
-@keyframes pulse-talk {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.01); box-shadow: 0 0 12px rgba(0,0,0,0.06); }
-  100% { transform: scale(1); box-shadow: none; }
+/* Deadpan Mode */
+body.deadpan-mode {
+  filter: grayscale(100%);
 }
 
-body.talking .page-content {
-  animation: pulse-talk 0.8s ease-in-out;
+/* Chaos Mode */
+body.chaos-mode {
+  transform: rotate(0.2deg);
+}
+
+/* Drunk Mode */
+body.drunk-mode {
+  filter: blur(0.4px) saturate(120%);
+}
+
+/* Konami Unlock (visual only) */
+body.konami-unlocked .personality-floating-btn {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
 }
