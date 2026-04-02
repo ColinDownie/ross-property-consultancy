@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ross Consultancy – Multi‑Modality System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ross Consultancy USP – a Six‑Point Multi‑Modality System combining legal, creative, operational and technical thinking.">
+  <style>
+    :root {
+      --bg: #05060a;
+      --fg: #f5f5f5;
+      --accent: #00c2ff;
+      --muted: #b3b3b3;
+      --max-width: 960px;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #151821 0, #050608 55%, #000 100%);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+    header {
+      margin-bottom: 2.5rem;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 2.8rem);
+      margin: 0 0 0.75rem;
+    }
+    .tagline {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 40rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+    .pill span {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 2.5rem;
+    }
+    @media (max-width: 800px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin: 0 0 0.75rem;
+    }
+    p {
+      margin: 0 0 0.9rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .system-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .system-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .system-label {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    .system-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .card {
+      border-radius: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 1.25rem 1.3rem;
+      background: radial-gradient(circle at top left, rgba(0,194,255,0.12), transparent 55%);
+    }
+    .quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+    .small-label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+    .chip {
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 0.15rem 0.6rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="eyebrow">Ross Consultancy</div>
+      <h1>Multi‑Modality System</h1>
+      <p class="tagline">
+        A Six‑Point way of working that fuses legal precision, creative architecture, operational realism and technical fluency into one coherent consultancy method.
+      </p>
+      <div class="pill">
+        <span>USP</span> Six‑Point Multi‑Modality System
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="section">
+          <h2>Core USP</h2>
+          <p>
+            Ross Consultancy operates using a unique <strong>Six‑Point Multi‑Modality System</strong>, developed through lived experience across
+            legal practice, creative design, operational leadership, client management and technical collaboration.
+          </p>
+          <p>
+            Every engagement is framed, structured and delivered to be structurally sound, strategically clear, legally robust and easily
+            understood by every stakeholder involved.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>The Six‑Point System</h2>
+          <ul class="system-list">
+            <li class="system-item">
+              <div class="system-label">01 · Sequence</div>
+              <div class="system-name">Order of Operations</div>
+              <p class="meta">
+                Understanding what must happen first, what depends on what, and what breaks if the order is wrong. This prevents downstream
+                chaos and keeps the architecture stable.
+              </p>
+            </li>
+            <li class="system-item">
+              <div class="system-label">02 · Selection</div>
+              <div class="system-name">Choosing the Right Path</div>
+              <p class="meta">
+                Evaluating options with clarity and intention — weighing risk, scalability, interpretation and alignment so decisions are made
+                on purpose, not by accident.
+              </p>
+            </li>
+            <li class="system-item">
+              <div class="system-label">03 · Iteration</div>
+              <div class="system-name">Refining Until It’s Right</div>
+              <p class="meta">
+                Adjusting and improving until the solution is elegant, robust and future‑proof, rather than shipping the first workable draft
+                and calling it done.
+              </p>
+            </li>
+            <li class="system-item">
+              <div class="system-label">04 · Explanation</div>
+              <div class="system-name">Making the Complex Simple</div>
+              <p class="meta">
+                Translating complex ideas into clear, accessible language for CEOs, staff, clients and technical teams. No jargon, no fog, just
+                shared understanding.
+              </p>
+            </li>
+            <li class="system-item">
+              <div class="system-label">05 · Implication</div>
+              <div class="system-name">Seeing Consequences Early</div>
+              <p class="meta">
+                Anticipating disputes, misinterpretations, IP issues and structural weaknesses before they arise, and designing systems that
+                avoid them by default.
+              </p>
+            </li>
+            <li class="system-item">
+              <div class="system-label">06 · Application</div>
+              <div class="system-name">Making It Work in Reality</div>
+              <p class="meta">
+                Turning strategy into something that actually works in the real world — operational, practical and usable by the people who
+                have to live with it.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card section">
+          <div class="small-label">Positioning Statement</div>
+          <p class="quote">
+            “I’m a Multi‑Modality Designer and Consultant. I use a Six‑Point System — Sequence, Selection, Iteration, Explanation,
+            Implication, Application — to deliver solutions that are structurally sound, strategically clear, legally robust and easily
+            understood by every stakeholder involved.”
+          </p>
+          <p class="meta">
+            Reuse this statement across websites, decks, proposals and profiles as the core Ross Consultancy USP.
+          </p>
+        </div>
+
+        <div class="section">
+          <div class="small-label">Modes Lived, Not Theorised</div>
+          <p class="meta">
+            The system is grounded in practical experience operating as: legal counsel, consultant, internal operator, client‑side
+            decision‑maker and collaborator with technical and creative teams.
+          </p>
+          <div class="stack">
+            <span class="chip">Legal Practice</span>
+            <span class="chip">Brand &amp; Design</span>
+            <span class="chip">Operations</span>
+            <span class="chip">Client‑Side Experience</span>
+            <span class="chip">Tech &amp; “Nerd” Collaboration</span>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>
