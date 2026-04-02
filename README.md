@@ -1,132 +1,109 @@
-Ross Property
-A Division of Ross Creative  
-Clear, Modern Property Consultancy
+# Ross Property Consultancy  
+### A Division of Ross Creative  
+### Clear, Modern Property Consultancy
 
-Overview
+## Overview
+
 Ross Property is a structured, modern property consultancy specialising in:
 
-Valuation
-
-Feasibility
-
-Site Analysis
-
-Due Diligence
-
-Spatial Planning
-
-Development Advisory
+- Valuation  
+- Feasibility  
+- Site Analysis  
+- Due Diligence  
+- Spatial Planning  
+- Development Advisory  
 
 This repository contains the full Ross Property system, including:
 
-The complete website
+- The complete website  
+- CSS and JS assets  
+- Templates, methodologies, and frameworks  
+- Operational systems and governance materials  
+- Brand identity documentation  
+- Client‑facing materials  
+- Strategic and technical documentation  
 
-CSS and JS assets
+---
 
-Templates, methodologies, and frameworks
+## Repository Structure
 
-Operational systems and governance materials
-
-Brand identity documentation
-
-Client‑facing materials
-
-Strategic and technical documentation
-
-Repository Structure
 See the root directory (/) for the full folder map.
 
-Key Directories
-/services — Service pages
+### Key Directories
 
-/library — Templates, methodologies, frameworks
+- **/services** — Service pages  
+- **/library** — Templates, methodologies, frameworks  
+- **/css** — Main stylesheet  
+- **/js** — Front‑end scripts  
+- **/components** — Navigation + footer  
+- **/brand** — Identity system  
+- **/operations** — Operational handbook, workflows, compliance  
+- **/services_docs** — Deep‑dive service documentation  
+- **/templates** — Report templates  
+- **/checklists** — Internal checklists  
+- **/methodologies** — Core methodologies  
+- **/strategy** — Strategic documents  
+- **/knowledge** — Knowledge architecture  
+- **/creative** — Ross Creative master system  
+- **/client** — Client‑facing materials  
+- **/website** — Website content (markdown)  
+- **/seo** — Metadata + sitemap  
 
-/css — Main stylesheet
+---
 
-/js — Front‑end scripts
+## Website
 
-/components — Navigation + footer
-
-/brand — Identity system
-
-/operations — Operational handbook, workflows, compliance
-
-/services_docs — Deep‑dive service documentation
-
-/templates — Report templates
-
-/checklists — Internal checklists
-
-/methodologies — Core methodologies
-
-/strategy — Strategic documents
-
-/knowledge — Knowledge architecture
-
-/creative — Ross Creative master system
-
-/client — Client‑facing materials
-
-/website — Website content (markdown)
-
-/seo — Metadata + sitemap
-
-Website
 The website is a static HTML build using:
 
-/css/main.css
+- `/css/main.css`  
+- `/js/app.js`  
+- `/components/nav.html`  
+- `/components/footer.html`  
 
-/js/app.js
+### Pages Included
 
-/components/nav.html
+- Home  
+- Services  
+- Six service sub‑pages  
+- About  
+- Contact  
+- Library  
 
-/components/footer.html
+---
 
-Pages Included
-Home
+## Build & Deployment
 
-Services
-
-Six service sub‑pages
-
-About
-
-Contact
-
-Library
-
-Build & Deployment
 For build and deployment instructions, see:
 
-/website_build_guide.md
+- `/website_build_guide.md`  
+- `/deployment_guide.md`  
 
-/deployment_guide.md
+---
 
-Identity & Brand
-See /brand for:
+## Identity & Brand
 
-Typography
+See `/brand` for:
 
-Colour palette
+- Typography  
+- Colour palette  
+- Tone of voice  
+- Logo usage  
+- Brand governance  
 
-Tone of voice
+---
 
-Logo usage
+## Operations
 
-Brand governance
+See `/operations` for:
 
-Operations
-See /operations for:
+- Operational handbook  
+- Internal audit system  
+- Automation workflows  
+- Compliance library  
+- Risk matrix  
 
-Operational handbook
+---
 
-Internal audit system
+## Licensing
 
-Automation workflows
-
-Compliance library
-
-Risk matrix
-
-Licensing
 All content © Ross Creative.
